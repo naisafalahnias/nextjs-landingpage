@@ -43,7 +43,7 @@ export default function Home() {
               className="w-10 h-10 object-contain"
             />
             <h1 className="px-3 py-1 text-[#519DBC] font-[400] uppercase tracking-wide text-lg font-marcellus">
-              Aphrodite
+              NaisaStore
             </h1>
           </div>
 
