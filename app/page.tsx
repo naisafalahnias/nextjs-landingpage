@@ -1,5 +1,6 @@
 'use client';
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -34,7 +35,9 @@ export default function Home() {
         <header className="flex justify-between items-center px-6 sm:px-8 py-4 sm:py-6 bg-[#EEF5F8] shadow-sm relative">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <img
+            <Image
+              width={40}
+              height={40}
               src="/images/Icon.png"
               alt="Aphrodite Logo"
               className="w-10 h-10 object-contain"
@@ -315,13 +318,17 @@ export default function Home() {
 
               {/* Images */}
               <div className="relative z-10 flex justify-center gap-6">
-                <img
-                  src="images/masker2.png"
+                <Image
+                  width={192}
+                  height={256}
+                  src="/images/masker2.png"
                   alt="Facial mask treatment"
                   className="w-48 h-64 object-cover shadow-lg"
                 />
-                <img
-                  src="images/masker1.png"
+                <Image
+                  width={192}
+                  height={256}
+                  src="/images/masker1.png"
                   alt="LED light therapy"
                   className="w-48 h-64 object-cover shadow-lg"
                 />
@@ -388,19 +395,19 @@ export default function Home() {
                 {
                   name: "Dr. Hannah Wagner",
                   role: "PLASTIC SURGEON",
-                  img: "images/dokter1.png",
+                  img: "/images/dokter1.png",
                   border: "border-[#fcdde1]"
                 },
                 {
                   name: "Dr. Bryan Hunter",
                   role: "ANESTHESIOLOGIST",
-                  img: "images/dokter2.png",
+                  img: "/images/dokter2.png",
                   border: "border-[#4aa3c5]"
                 },
                 {
                   name: "Dr. Sarah Nelson",
                   role: "DERMATOLOGIST",
-                  img: "images/dokter3.png",
+                  img: "/images/dokter3.png",
                   border: "border-[#fcdde1]"
                 }
               ].map((doc, idx) => (
@@ -408,7 +415,8 @@ export default function Home() {
                   <div
                     className={`relative mx-auto w-56 h-64 overflow-hidden border-4 ${doc.border}`}
                   >
-                    <img
+                    <Image
+                      fill
                       src={doc.img}
                       alt={doc.name}
                       className="w-full h-full object-cover"
@@ -526,8 +534,9 @@ export default function Home() {
               {/* Left Image */}
               <div className="w-full lg:w-1/2">
                 <div className="relative w-full h-64 sm:h-80 lg:h-full">
-                  <img
-                    src="images/consul.png"
+                  <Image
+                    fill
+                    src="/images/consul.png"
                     alt="Beauty consultation"
                     className="w-full h-full object-cover"
                   />
@@ -621,8 +630,10 @@ export default function Home() {
               <div className="p-8 sm:p-12">
                 {/* Icon */}
                 <div className="flex justify-center mb-6">
-                  <img
-                    src="images/face.png"
+                  <Image
+                    width={48}
+                    height={48}
+                    src="/images/face.png"
                     alt="Facial Treatment Icon"
                     className="w-14 h-14"
                   />
@@ -713,9 +724,10 @@ export default function Home() {
                 href="#"
                 className="block space-y-6 group"
               >
-                <div className="overflow-hidden">
-                  <img
-                    src="images/muka1.png"
+                <div className="overflow-hidden relative">
+                  <Image
+                    fill
+                    src="/images/muka1.png"
                     alt="Featured skincare"
                     className="w-full h-[420px] object-cover transition-transform duration-300 group-hover:scale-105"
                   />
@@ -742,8 +754,10 @@ export default function Home() {
               <div className="space-y-10">
                 {/* Post 1 */}
                 <a href="#" className="flex gap-5 group">
-                  <img
-                    src="images/muka2.png"
+                  <Image
+                    width={144}
+                    height={112}
+                    src="/images/muka2.png"
                     alt="Beauty treatment"
                     className="w-36 h-28 object-cover rounded-md transition-transform duration-300 group-hover:scale-105"
                   />
@@ -763,8 +777,10 @@ export default function Home() {
 
                 {/* Post 2 */}
                 <a href="#" className="flex gap-5 group">
-                  <img
-                    src="images/botol.png"
+                  <Image
+                    width={144}
+                    height={112}
+                    src="/images/botol.png"
                     alt="Skincare products"
                     className="w-36 h-28 object-cover rounded-md transition-transform duration-300 group-hover:scale-105"
                   />
@@ -795,7 +811,9 @@ export default function Home() {
               <div className="space-y-6">
                 <div className="flex items-center gap-3">
                 <div className="flex items-center gap-3">
-                  <img
+                  <Image
+                    width={40}
+                    height={40}
                     src="/images/Icon.png"
                     alt="Aphrodite Logo"
                     className="w-10 h-10 object-contain"
