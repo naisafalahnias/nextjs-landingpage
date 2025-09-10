@@ -5,30 +5,30 @@ import Image from "next/image";
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const showTestimonial = (slideNumber: number) => {
-    // Hide all slides
-    document.querySelectorAll('.testimonial-slide').forEach(slide => {
-        slide.classList.remove('active');
-    });
+  // const showTestimonial = (slideNumber: number) => {
+  //   // Hide all slides
+  //   document.querySelectorAll('.testimonial-slide').forEach(slide => {
+  //       slide.classList.remove('active');
+  //   });
 
     // Show selected slide
-    const targetSlide = document.getElementById('testimonial-' + slideNumber);
-    if (targetSlide) {
-        targetSlide.classList.add('active');
-    }
+//     const targetSlide = document.getElementById('testimonial-' + slideNumber);
+//     if (targetSlide) {
+//         targetSlide.classList.add('active');
+//     }
 
-    // Update dots
-    document.querySelectorAll('.dot-nav').forEach(dot => {
-        dot.classList.remove('active', 'bg-teal-500');
-        dot.classList.add('bg-gray-300');
-    });
+//     // Update dots
+//     document.querySelectorAll('.dot-nav').forEach(dot => {
+//         dot.classList.remove('active', 'bg-teal-500');
+//         dot.classList.add('bg-gray-300');
+//     });
 
-    const targetDot = document.querySelector('[data-slide="' + slideNumber + '"]');
-    if (targetDot) {
-        targetDot.classList.add('active', 'bg-teal-500');
-        targetDot.classList.remove('bg-gray-300');
-    }
-};
+//     const targetDot = document.querySelector('[data-slide="' + slideNumber + '"]');
+//     if (targetDot) {
+//         targetDot.classList.add('active', 'bg-teal-500');
+//         targetDot.classList.remove('bg-gray-300');
+//     }
+// };
     return (
       <div className="min-h-screen bg-gray-50">
         {/* Navbar */}
@@ -828,7 +828,7 @@ export default function Home() {
 
               {/* Operating Hours */}
               <div className="space-y-6">
-                <h3 className="text-xl font-semibold">We're Open At</h3>
+                <h3 className="text-xl font-semibold">{`We're Open At`}</h3>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-white rounded-full"></div>
